@@ -14,6 +14,6 @@ interface QuotesAPI {
     suspend fun getUserType(@Query("email")email: String): Response<UserTypeResponse>
 
     //TODO : Body to JSON, Basic Auth
-    @POST("/api/v1/auth/validate/")
+    @POST("/api/v1/auth/validate")
     suspend fun authorize(@Body requestBody: RequestBody): Response<ResponseBody>
 }
