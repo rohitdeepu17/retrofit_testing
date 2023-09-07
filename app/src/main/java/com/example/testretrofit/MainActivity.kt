@@ -14,9 +14,11 @@ class MainActivity : AppCompatActivity() {
         val quotesAPI = RetrofitHelper.getInstance().create((QuotesAPI::class.java))
 
         GlobalScope.launch {
-            val result = quotesAPI.getQuotes(1)
+            //val result = quotesAPI.getQuotes(1)
+            //val result = quotesAPI.getUserType("hemanthcaretaker@yopmail.com")
+            val result = quotesAPI.authorize(RequestBody("mobileNumber","9182004928" ))
             print(result.body())
-            Log.d("Rohit", "body : ${result.body()?.count}")
+            Log.d("Rohit", "body : ${result.body()}")
         }
     }
 }
