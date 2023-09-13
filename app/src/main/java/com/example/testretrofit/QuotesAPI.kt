@@ -15,5 +15,5 @@ interface QuotesAPI {
 
     //TODO : Body to JSON, Basic Auth
     @POST("/api/v1/auth/validate")
-    suspend fun authorize(@Body requestBody: RequestBody): Response<ResponseBody>
+    suspend fun authValidate(@Body requestBody: RequestBody): Response<ResponseBody>
 }

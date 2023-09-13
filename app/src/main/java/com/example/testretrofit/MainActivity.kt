@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         GlobalScope.launch {
             //val result = quotesAPI.getQuotes(1)
             //val result = quotesAPI.getUserType("hemanthcaretaker@yopmail.com")
-            val result = quotesAPI.authorize(RequestBody("mobileNumber","9182004928" ))
+            val result = quotesAPI.authValidate(RequestBody("mobileNumber","9182004928" ))
             print(result.body())
             Log.d("Rohit", "body : ${result.body()}")
         }
